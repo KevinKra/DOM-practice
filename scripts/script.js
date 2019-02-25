@@ -13,13 +13,35 @@ liElement.className = "greenify";
 const paragraph = document.querySelector("p");
 paragraph.innerHTML += " Hello!!!";
 
-//traverse and modify
-//notice the whitespace nodes
-mainArticle.firstChild.nextSibling.className = "green";
-
-
 
 //3
+/* Practice traversing and modifying the DOM using the following properties:
+
+//traverse all nodes
+.firstChild
+.lastChild
+.nextSibling
+.previousSibling
+.parentNode
+
+//traverse only elements 
+.firstElementChild
+.lastElementChild
+.nextElementSibling
+.previousElementSibling
+.parentElement
+
+//modify
+.innerText
+.innerHTML
+.textContent
+
+notice the differences*/
+mainArticle.firstChild.nextElementSibling.nextElementSibling.className = "greenify";
+
+
+
+//4
 /* Create an unordered list, create two list elements
 place the second list element before the first list element.
 Append unordered list to mainArticle */  
@@ -39,7 +61,7 @@ mainArticle.appendChild(newUl);
 
 
 
-//4
+//5
 /* Use querySelectorAll to create an HTML collection of all
 list elements that have any id attribute. Change the color 
 of these selected elements to blue */
