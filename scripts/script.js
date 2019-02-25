@@ -78,13 +78,16 @@ function changeList() {
 /* Cache the form input, then walk the DOM until you reach the italic
 "your" in the label. Modify it in some way. */
 const userInput = document.querySelector("#userInputs");
-userInput.firstChild.nextSibling.firstChild.nextSibling.style.color = "red";
+// userInput.firstChild.nextSibling.firstChild.nextSibling.style.color = "red";
 //or
-userInput.firstElementChild.firstElementChild.style.color = "blue";
+userInput.firstElementChild.firstChild.nextSibling.innerText = "my";
 
 
-
-
+//7
+/* Targeting the same cached selection userInput, change the last word
+of the label sentence */
+// userInput.firstChild.nextSibling.nextSibling.nodeValue = "hello"
+userInput.firstChild.nextSibling.firstChild.nextSibling.nextSibling.nodeValue = " ID"
 
 
 
