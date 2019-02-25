@@ -2,16 +2,24 @@ const mainArticle = document.querySelector(".main-article");
 const list = document.querySelector("ul");
 
 
-const liEl = document.getElementById("two");
+//1
+/* Cache the list element with the id "two" then 
+add the class name "greenify" to it.*/
+const liElement = document.getElementById("two");
+liElement.className = "greenify";
+
+//2
+/* Cache the (first/only)paragraph element and append it with a string */
 const paragraph = document.querySelector("p");
 paragraph.innerHTML += " Hello!!!";
 
 //traverse and modify
 //notice the whitespace nodes
 mainArticle.firstChild.nextSibling.className = "green";
-liEl.className = "green";
 
-//2
+
+
+//3
 /* Create an unordered list, create two list elements
 place the second list element before the first list element.
 Append unordered list to mainArticle */  
@@ -30,9 +38,11 @@ newUl.insertBefore(newLi2, newUl.firstChild);
 mainArticle.appendChild(newUl);
 
 
-/* Use querySelectorAll to create an HTML collection of all
-li elements that have an id attribute. */
 
+//4
+/* Use querySelectorAll to create an HTML collection of all
+list elements that have any id attribute. Change the color 
+of these selected elements to blue */
 const liCollection = document.querySelectorAll("li[id]")
 changeList();
 function changeList() {
