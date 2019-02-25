@@ -74,16 +74,20 @@ function changeList() {
 }
 
 
+//6
+/* Cache the form input, then walk the DOM until you reach the italic
+"your" in the label. Modify it in some way. */
+const userInput = document.querySelector("#userInputs");
+userInput.firstChild.nextSibling.firstChild.nextSibling.style.color = "red";
+//or
+userInput.firstElementChild.firstElementChild.style.color = "blue";
 
-//---explain / use
-//nodeValue
-//textContent
-//innerHTML
 
-//createElement()
-//createTextNode()
-//appendChild() / removeChild()
 
-//hasAttribute()
-//getAttribute()
-//removeAttribute()
+
+
+
+
+
+
+
