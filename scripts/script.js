@@ -1,6 +1,16 @@
 const mainArticle = document.querySelector(".main-article");
 const list = document.querySelector("ul");
 
+
+const liEl = document.getElementById("two");
+const paragraph = document.querySelector("p");
+paragraph.innerHTML += " Hello!!!";
+
+//traverse and modify
+//notice the whitespace nodes
+mainArticle.firstChild.nextSibling.className = "green";
+liEl.className = "green";
+
 //2
 /* Create an unordered list, create two list elements
 place the second list element before the first list element.
@@ -20,19 +30,10 @@ newUl.insertBefore(newLi2, newUl.firstChild);
 mainArticle.appendChild(newUl);
 
 
-
-
-const liEl = document.getElementById("two");
-const paragraph = document.querySelector("p");
+/* Use querySelectorAll to create an HTML collection of all
+li elements that have an id attribute. */
 
 const liCollection = document.querySelectorAll("li[id]")
-
-
-//traverse and modify
-//notice the whitespace nodes
-mainArticle.firstChild.nextSibling.className = "green";
-liEl.className = "green";
-paragraph.innerHTML += " Hello!!";
 changeList();
 function changeList() {
   liCollection.forEach( element => {
